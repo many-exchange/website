@@ -11,7 +11,7 @@
       @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
       :root {
         --white: #f2f2f2;
-        --grey: #4f4f4f;
+        --grey: #d1d1d1;
         --black: #242429;
         --pink: #dc6a6c;
         --blue: #0b9ba9;
@@ -22,7 +22,7 @@
         --spacing-base: 10px;
         --spacing-lg: 15px;
         --shadow: 0px 7px 25px -15px rgba(0, 0, 0, 1);
-        --transition: 0.2s ease;
+        --transition: 0.1s ease;
       }
       ::-webkit-scrollbar {
         display: none;
@@ -30,8 +30,8 @@
       body {
         position: relative;
         margin: 0;
-        background: var(--white);
-        color: var(--black);
+        background: var(--black);
+        color: var(--white);
         overflow-x: hidden;
         font-size: var(--base-font);
         font-family: "Outfit", sans-serif;
@@ -57,11 +57,12 @@
       a:active {
         opacity: 0.8;
       }
-      h2 {
+      h2, h3 {
         margin: unset;
       }
       .grey-text {
         color: var(--grey);
+        text-align: center;
       }
       .flex {
         display: flex;
@@ -117,7 +118,7 @@
         max-width: 150px;
         cursor: pointer;
         background: var(--pink);
-        color: var(--white);
+        color: var(--black);
         font-size: var(--lg-font);
         font-weight: bold;
         padding: var(--spacing-base) var(--spacing-lg);
@@ -136,9 +137,8 @@
       }
       .hero-logo {
         width: 100%;
+        max-width: 500px;
         height: auto;
-        padding-bottom: var(--spacing-lg);
-        border-bottom: 5px dotted var(--blue);
       }
     </style>
     <script>
@@ -146,13 +146,11 @@
     </script>
   </head>
   <body class="flex-centered column">
-    <div class="gutter flex column">
-      <img class="hero-logo" src="public/full-lockup.png" alt="Many Exchange logo" />
-      <br>
-      <h3 class="grey-text">Trade faster.</h3>
+    <img class="hero-logo" src="public/full-lockup.png" alt="Many Exchange logo" />
+    <div class="gutter flex-centered column">
       <span class="grey-text">Low latency, NASDAQ-style protocols and turnkey solutions for traders.</span>
-      <br>
       <span class="grey-text"><i>*Full site and docs coming soon</i></span>
+      <br>
       <a href="https://github.com/many-exchange" target="_blank">
         <h2>
           <i class="fab fa-github"></i>
@@ -165,7 +163,6 @@
           Twitter
         </h2>
       </a>
-      <br>
       <btn class="flex align-center justify-between">
         <i class="fas fa-envelope"></i>
         Contact Us
